@@ -2,41 +2,24 @@ import java.util.*;
 
 public class Day40 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
 
-        int[] nums = new int[n];
+        int[] candyType = new int[n];
 
         for (int i = 0; i < n; i++) {
-            nums[i] = sc.nextInt();
+            candyType[i] = sc.nextInt();
         }
 
-        int k = sc.nextInt();
+        Set<Integer> set = new HashSet<>();
 
-        int[] suffixMin = new int[n];
-        suffixMin[n - 1] = nums[n - 1];
-
-        for (int i = n - 2; i >= 0; i--) {
-            suffixMin[i] = Math.min(nums[i], suffixMin[i + 1]);
+        for (int candy : candyType) {
+            set.add(candy);
         }
 
-        // Find first stable index
-        int prefixMax = nums[0];
-
-        int answer = -1;
-
-        for (int i = 0; i < n; i++) {
-
-            prefixMax = Math.max(prefixMax, nums[i]);
-
-            int instability = prefixMax - suffixMin[i];
-
-            if (instability <= k) {
-                answer = i;
-                break;
-            }
-        }
+        int answer = Math.min(set.size(), n / 2);
 
         System.out.println(answer);
 
