@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Day5{
 
     public static int maximumProduct(int[] nums) {
