@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Day8 {
 
     public static String mostCommonWord(String paragraph, String[] banned) {
