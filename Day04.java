@@ -1,5 +1,4 @@
 public class Day4 {
-
     public static int SND(int[] nums) {
 
         int left = 0;
