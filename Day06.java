@@ -1,7 +1,5 @@
 import java.util.*;
-
 public class Day6{
-
     public static int numDecodings(String s) {
 
         int n = s.length();
