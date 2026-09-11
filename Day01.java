@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 public class Day1 {
 
     public static int findGCD(int[] nums) {
