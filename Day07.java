@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Day7 {
 
     public static int lengthOfLIS(int[] nums) {
